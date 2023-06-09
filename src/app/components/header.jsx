@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 import Modal from './modal'
 
-const DivHeader = styled('header')`
+const DivHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,7 +10,7 @@ const DivHeader = styled('header')`
   font-size: 35px;
   padding: 32px;
 `
-const Span = styled('span')`
+const Span = styled.span`
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -31,7 +31,9 @@ const Header = () => {
   return (
     <DivHeader>
       <span>Interview Calendar</span>
-      <Span onClick={() => setModalActive(true)}>+</Span>
+      <Span onClick={() => setModalActive(true)}>
+        +
+      </Span>
       <Modal active={modalActive} setActive={setModalActive}/>
     </DivHeader>
   )

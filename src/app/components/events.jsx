@@ -1,17 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const DivContainer = styled('div')`
+const DivContainer = styled.div`
   display: flex;
   justify-content: space-between;
 `
-const TimeList = styled('ul')`
+const TimeList = styled.ul`
   display: flex;
   flex-direction: column;
   padding: 0;
   margin-top: 49px;
 `
-const Li = styled('li')`
+const Li = styled.li`
   list-style: none;
   font-family: "Segoe UI", serif;
   font-weight: 600;
@@ -19,7 +19,7 @@ const Li = styled('li')`
   color: #cbcbcb;
   margin: 0 0 34px 17px;
 `
-const DaysList = styled('ul')`
+const DaysList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
@@ -28,7 +28,7 @@ const DaysList = styled('ul')`
   margin: 0;
   overflow: hidden;
 `
-const Day = styled('li')`
+const Day = styled.li`
   width: 80px;
   height: 64px;
   box-shadow: inset 0 0 0 3px #fdfdfe;
@@ -58,13 +58,9 @@ const Day = styled('li')`
   }
 `
 
-const Events = ({select, setSelect}) => {
+const Events = ({setSelect}) => {
   const days = new Array(91).fill('')
   const time = ['09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00']
-
-  const handleSelect = ({target}) => {
-    !target.textContent && setSelect(true)
-  }
 
   return (
     <DivContainer>
@@ -73,7 +69,11 @@ const Events = ({select, setSelect}) => {
       </TimeList>
       <DaysList>
         {days.map((day, i) => (
-          <Day key={i} onClick={handleSelect} tabIndex={0}>
+          <Day
+            key={i}
+            onClick={e => !e.target.textContent && setSelect(true)}
+            tabIndex={0}
+          >
             {day}
           </Day>
         ))}

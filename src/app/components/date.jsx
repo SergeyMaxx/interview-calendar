@@ -1,34 +1,33 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const DivContainer = styled('div')`
+const DivContainer = styled.div`
   display: flex;
   flex-direction: column;
   border-bottom: 2px solid #e9e9ea;
   border-top: 2px solid #e9e9ea;
   padding: 14px;
-  //margin-bottom: 25px;
   background: #f4f4f5;
 `
-const Ul = styled('ul')`
+const Ul = styled.ul`
   display: flex;
   justify-content: space-evenly;
   margin: 0;
   padding: 0;
 `
-const Li = styled('li')`
+const Li = styled.li`
   display: flex;
   flex-direction: column;
   font-weight: 900;
   list-style: none;
 `
-const DaysOfWeek = styled('div')`
+const DaysOfWeek = styled.div`
   display: flex;
   justify-content: center;
   font-size: 16px;
   margin-bottom: 10px;
 `
-const Days = styled('div')`
+const Days = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,7 +35,7 @@ const Days = styled('div')`
   height: 50px;
   font-size: 30px;
 `
-const SelectedDate = styled('div')`
+const SelectedDate = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,17 +46,17 @@ const SelectedDate = styled('div')`
   color: #fff;
 `
 
-const MonthContainer = styled('div')`
+const MonthContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0 47px;
 `
-const LeftRight = styled('span')`
+const LeftRight = styled.span`
   color: #fd3132;
   font-size: 24px;
   font-weight: 900;
 `
-const Month = styled('span')`
+const Month = styled.span`
   font-size: 24px;
   font-weight: 900;
 `

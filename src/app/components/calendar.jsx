@@ -5,7 +5,7 @@ import Date from './date'
 import Events from './events'
 import Footer from './footer'
 
-const DivContainer = styled('div')`
+const DivContainer = styled.div`
   width: 640px;
 `
 
@@ -16,7 +16,7 @@ const Calendar = () => {
     <DivContainer>
       <Header/>
       <Date/>
-      <Events select={select} setSelect={setSelect}/>
+      <Events setSelect={setSelect}/>
       <Footer select={select}/>
     </DivContainer>
   )

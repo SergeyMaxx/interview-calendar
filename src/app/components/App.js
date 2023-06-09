@@ -6,7 +6,6 @@ const Body = styled('div')`
   display: flex;
   justify-content: center;
   font-family: "Segoe UI Light", serif;
-  //background: #000000;
 `
 
 function App() {
